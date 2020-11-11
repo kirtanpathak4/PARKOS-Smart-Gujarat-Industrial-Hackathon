@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Smart Parking Systems</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="google-signin-client_id" content="243904268417-lr10g81a5a166qnrdjqtj3gmjobdu32q.apps.googleusercontent.com">
+		<link type="text/css" rel="stylesheet" href="reset.css" /><link type="text/css" rel="stylesheet" href="jquery-ui.min.css" /><link type="text/css" rel="stylesheet" href="pj-all.css" /><link type="text/css" rel="stylesheet" href="admin.css" /><script src="jquery.min.js"></script><script src="jquery-migrate.min.js"></script><script src="pjAdminCore.js"></script><script src="jquery-ui.custom.min.js"></script><script src="jquery.validate.min.js"></script><script src="pjAdmin.js"></script>	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="logo">
+					<a href="https://www.phpjabbers.com/car-park-booking/" target="_blank">Car Park Booking System</a>
+					<span>v2.0</span>
+				</div>
+			</div>
+			<div id="middle">
+				<div id="login-content">
+				<div class="login-box">
+	
+	<h3>Admin Login</h3>
+	
+	<form action="/1550244855_230/index.php?controller=pjAdmin&amp;action=pjActionLogin" method="post" id="frmLoginAdmin" class="form">
+		<input type="hidden" name="login_user" value="1" />
+		<p>
+			<label class="title">Email:</label>
+			<span class="pj-form-field-custom pj-form-field-custom-before">
+				<span class="pj-form-field-before"><abbr class="pj-form-field-icon-email"></abbr></span>
+				<input type="text" name="login_email" id="login_email" value="admin@admin.com" class="pj-form-field required email w250" />
+			</span>
+		</p>
+		<p>
+			<label class="title">Password:</label>
+			<span class="pj-form-field-custom pj-form-field-custom-before">
+				<span class="pj-form-field-before"><abbr class="pj-form-field-icon-password"></abbr></span>
+				<input type="password" name="login_password" id="login_password" value="pass" class="pj-form-field required w250" autocomplete="off" />
+			</span>
+		</p>
+		<p>
+			<label class="title">&nbsp;</label>
+			<input type="submit" value="Login" class="pj-button" />
+			<a class="no-decor l10" href="https://demo.phpjabbers.com/1550244855_230/index.php?controller=pjAdmin&action=pjActionForgot">Forgot password</a>
+		</p>
+			</form>
+</div>				</div>
+			</div> <!-- middle -->
+		</div> <!-- container -->
+		
+        </div>
+        
+        <div class="g-signin2" data-onsuccess="onSignIn">
+        	
+        </div>
+	<script async src="load.js"></script></body>
+</html>

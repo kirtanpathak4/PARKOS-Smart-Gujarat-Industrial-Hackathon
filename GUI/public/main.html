@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>Smart Parking Systems</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link type="text/css" rel="stylesheet" href="reset.css" /><link type="text/css" rel="stylesheet" href="jquery-ui.min.css" /><link type="text/css" rel="stylesheet" href="pj-all.css" /><link type="text/css" rel="stylesheet" href="admin.css" /><script src="jquery.min.js"></script><script src="jquery-migrate.min.js"></script><script src="pjAdminCore.js"></script><script src="jquery-ui.custom.min.js"></script><script src="pjActionMessages"></script>		<!--[if gte IE 9]>
+  		<style type="text/css">.gradient {filter: none}</style>
+		<![endif]-->
+	</head>
+	<body>
+		<link href="pj.bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="index.php?controller=pjFront&action=pjActionLoadCss" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="index.php?controller=pjFront&action=pjActionLoad"></script>
+		<div id="container">
+    		<div id="header">
+				<div id="logo">
+					<a href="https://www.phpjabbers.com/car-park-booking/" target="_blank">Car Park Booking System</a>
+					<span>v2.0</span>
+				</div>
+			</div>
+			
+			<div id="middle">
+				<div id="leftmenu">
+					
+<div class="leftmenu-top"></div>
+<div class="leftmenu-middle">
+	<ul class="menu">
+		<li><a href="index.php?controller=pjAdmin&amp;action=pjActionIndex" class="menu-focus"><span class="menu-dashboard">&nbsp;</span>Dashboard</a></li>
+		<li><a href="login.html"><span class="menu-logout">&nbsp;</span>Logout</a></li>
+	</ul>
+</div>
+<div class="leftmenu-bottom"></div>				</div>
+				<div id="right">
+					<div class="content-top"></div>
+					<div class="content-middle" id="content">
+						<div class="dashboard_header">
+		<div class="item">
+			<div class="stat spaces">
+				<div class="info">
+					<abbr>2</abbr>
+					spaces occupied today				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="stat cars">
+				<div class="info">
+					<abbr>1</abbr>
+					car coming today				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="stat cars">
+				<div class="info">
+					<abbr>1</abbr>
+					car leaving today				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="dashboard_box">
+		<div class="dashboard_top">
+			<div class="dashboard_column_top">Latest bookings</div>
+			<div class="dashboard_column_top">Coming today</div>
+			<div class="dashboard_column_top">Leaving today</div>
+		</div>
+		<div class="dashboard_middle">
+			<div class="dashboard_column">
+				<div class="dashboard_list dashboard_latest_list">
+												<div class="dashboard_row" id="table_body">							
+								
+								</div>
+											</div>
+			</div>
+			
+			<div class="dashboard_column">
+				<div class="dashboard_list dashboard_latest_list">
+												<div class="dashboard_row">							
+								<label>Name: <a href="/1550220062_631/index.php?controller=pjAdminBookings&amp;action=pjActionUpdate&amp;id=1">Ava Mccoy</a></label>
+								<label>Make: Ford</label>
+								<label>Model: Mondeo</label>
+								<label>Registration: <strong class="bold">A8652KC</strong></label>
+								<label>Days: 9</label>							</div>
+											</div>
+			</div>
+			<div class="dashboard_column">
+				<div class="dashboard_list dashboard_latest_list">
+												<div class="dashboard_row">							
+								<label>Name: <a href="/1550220062_631/index.php?controller=pjAdminBookings&amp;action=pjActionUpdate&amp;id=3">Piper Jones</a></label>
+								<label>Make: Land Rover</label>
+								<label>Model: Range Rover Sport</label>
+								<label>Registration: <strong class="bold">CA5231PC</strong></label>
+								<label>Days: 4</label>							</div>
+											</div>
+			</div>
+		</div>
+		<div class="dashboard_bottom"></div>
+	</div>
+	
+	<div class="clear_left t20 overflow">
+		<div class="float_left black t30 t20"><span class="gray">Last login:</span> 
+		18-04-2017, 12:32</div>
+		<div class="float_right overflow">
+					<div class="dashboard_date">
+				<abbr>Friday</abbr>
+				15-02-2019			</div>
+			<div class="dashboard_hour">08:48</div>
+		</div>
+	</div>
+						</div>
+					<div class="content-bottom"></div>
+				</div> <!-- content -->
+				<div class="clear_both"></div>
+			</div> <!-- middle -->
+		
+		
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDf4tFIT-mVlVEFmSpfIVDUD9vCEmOXpTI",
+    authDomain: "smart-parking-systems-158f7.firebaseapp.com",
+    databaseURL: "https://smart-parking-systems-158f7.firebaseio.com",
+    projectId: "smart-parking-systems-158f7",
+    storageBucket: "smart-parking-systems-158f7.appspot.com",
+    messagingSenderId: "912169085275"
+  };
+  firebase.initializeApp(config);
+  console.log(firebase);
+</script>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="index.js"></script>
+	<script async src="load.js"></script></body>
+</html>

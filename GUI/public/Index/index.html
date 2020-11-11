@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST PAGE</title>
+</head>
+<body>
+	<div>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>ID</td>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+				
+			</tbody>
+		</table>
+	</div>
+	
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDf4tFIT-mVlVEFmSpfIVDUD9vCEmOXpTI",
+    authDomain: "smart-parking-systems-158f7.firebaseapp.com",
+    databaseURL: "https://smart-parking-systems-158f7.firebaseio.com",
+    projectId: "smart-parking-systems-158f7",
+    storageBucket: "smart-parking-systems-158f7.appspot.com",
+    messagingSenderId: "912169085275"
+  };
+  firebase.initializeApp(config);
+  console.log(firebase);
+</script>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login to PARKOS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-client_id" content="309571988336-igg498qmibvl9t5arve2b61lf3ueqa4a.apps.googleusercontent.com">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      window.location.href="https://smart-parking-systems-232020.firebaseapp.com/examples/dashboard.html"
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'light',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+  <script type="text/javascript">
+  	function check_auth() {
+  		firebase.auth().onAuthStateChanged(user => {
+  			if(user) {
+   			 
+   			 var user1 = firebase.auth().currentUser;
+   			 var name=user1.displayName;
+   			 console.log(window.location.href);
+   			 console.log("Name: "+name);
+   			 //window.location = 'https://smart-parking-systems-232020.firebaseapp.com/examples/dashboard.html'; //After successful login, user will be redirected to home.html
+  }
+});
+  		// body...
+  	}
+  	function toggleSignin(){
+  		 if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      }
+      else{
+      	var email=document.getElementById("email").value;
+  		var password=document.getElementById("password").value;
+  		var counter;
+  		counter=true;
+  		firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  		var errorCode = error.code;
+  		var errorMessage = error.message;
+  		console.log(errorMessage);
+  		alert("Error: "+errorMessage);
+  		//counter=false;
+  		
+ })
+      }
+  		
+  		check_auth();
+}
+  	//console.log("Error:"+errorMessage);
+  </script>
+<!--===============================================================================================-->
+</head>
+<body >
+	 <style>  
+            a:hover { 
+                text-decoration:none; 
+                color:rgb(152,81,241); 
+            } 
+        </style> 
+	 
+
+
+  
+
+
+	<div class="limiter">
+		
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-20 p-b-50" style="height: 600px;">
+				
+				<form class="login100-form validate-form" style="opacity: 1;">
+					<span class="login100-form-logo">
+						<i class="fa fa-car"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						<input class="input100" type="text" name="username" placeholder="Email" id="email">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Password" id="password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					
+							<div class="container-login100-form-btn">
+						<button type="button" class="login100-form-btn" id="login" onclick="toggleSignin()">
+							Login
+						</button>
+						
+						
+						
+							
+						
+						
+						
+					
+					
+					<div class >
+						
+					</div>
+
+
+					</div><br>
+					<div class="text-center p-t-20">
+						<a class="txt1" href="#">
+							Forgot Password?
+						</a>
+
+					</div>
+					<div class="text-center p-t-20"><font color="#000000"> New User ? </font>
+						<a class="txt1 p-2" href="registration.html">
+						Register
+						</a>
+
+					</div>
+					
+					
+				</form>
+	
+			</div>
+		</div>
+</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCcTYmxlWkvv2137COo-Lx3-E8mEfQ3EuE",
+    authDomain: "sgpsem3.firebaseapp.com",
+    databaseURL: "https://sgpsem3.firebaseio.com",
+    projectId: "sgpsem3",
+    storageBucket: "sgpsem3.appspot.com",
+    messagingSenderId: "207348938535"
+  };
+  firebase.initializeApp(config);
+  console.log(firebase);
+</script>
+	<script>
+  	function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  window.location.href="dashboard.html"
+}
+ function loginPage(){
+ 	location.href="admin.html"
+ }
+  </script>
+  <script src="transfer.js"></script>
+
+</body>
+</html>
